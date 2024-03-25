@@ -1,0 +1,40 @@
+@use '../_root' as *;
+
+.footer {
+    align-items: center;
+    background: $color-4;
+    display: flex;
+    font-family:
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif,
+    ;
+    justify-content: space-around;
+    user-select: none;
+
+    p {
+        color: $color-1;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 100px;
+
+        li {
+            a {
+                color: $color-1;
+
+                &:visited {
+                    color: $color-1;
+                }
+
+                &:hover {
+                    font-weight: bold;
+                    transition: 100ms;
+                }
+            }
+        }
+    }
+}

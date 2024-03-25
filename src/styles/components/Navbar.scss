@@ -1,0 +1,49 @@
+@use '../_root' as *;
+
+.navbar {
+    align-items: center;
+    background: $color-4;
+    color: $color-1;
+    display: flex;
+    font-family:
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif,
+    ;
+    justify-content: space-around;
+    user-select: none;
+
+    section {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 185px;
+
+        img {
+            content: url(../../assets/logo.png);
+            user-select: none;
+            width: 40px;
+        }
+
+        a {
+            color: $color-1;
+            font-size: $font-3;
+
+            &:visited {
+                color: $color-1;
+            }
+        }
+    }
+
+    button {
+        border: none;
+        font-size: $font-3;
+        text-align: center;
+        width: 100px;
+
+        &:hover {
+            font-weight: bold;
+            transition: 100ms;
+        }
+    }
+}

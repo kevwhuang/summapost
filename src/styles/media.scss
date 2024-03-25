@@ -1,0 +1,84 @@
+@use '_root' as *;
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        section {
+            width: 150px;
+
+            a {
+                font-size: $font-2;
+                text-transform: uppercase;
+            }
+        }
+
+        button {
+            font-size: $font-2;
+            text-transform: uppercase;
+        }
+    }
+
+    .form {
+        margin: 25px 5%;
+
+        .form__source {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                'source source'
+                'selections button'
+            ;
+            grid-template-columns: 1fr 1fr;
+
+            .form__source--field {
+                grid-area: source;
+
+                input {
+                    padding: 5px 10px;
+                }
+            }
+
+            .form__source--selections {
+                grid-area: selections;
+                margin: auto;
+                width: 100%;
+
+                select {
+                    width: 100%;
+                }
+            }
+
+            button {
+                grid-area: button;
+                width: 100%;
+            }
+        }
+
+        .form__inputs {
+            .form__inputs--field {
+                input {
+                    padding: 5px 10px;
+                }
+
+                textarea {
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        .form__buttons {
+            justify-content: space-between;
+            padding: 0 0 10px 0;
+        }
+
+    }
+
+    .info {
+        margin: 25px 5%;
+    }
+
+    .footer {
+        ul {
+            width: 90px;
+        }
+    }
+}

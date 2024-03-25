@@ -1,0 +1,22 @@
+@use '_root' as *;
+
+#display {
+    display: grid;
+    grid-template-areas:
+        'navbar'
+        'main'
+        'footer'
+    ;
+    grid-template-rows: 50px 1fr 50px;
+    margin: auto;
+    max-width: 2560px;
+    min-height: 100dvh;
+}
+
+#help {
+    background: $color-1;
+}
+
+#home {
+    background: $color-1;
+}

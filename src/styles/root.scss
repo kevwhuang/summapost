@@ -1,0 +1,18 @@
+@use '_root' as *;
+
+::view-transition-new(root) {
+    animation-duration: 1s;
+}
+
+::view-transition-old(root) {
+    animation-duration: 1s;
+}
+
+html {
+    background: $color-4;
+    font-family:
+        'Roboto',
+        'Helvetica Neue',
+        sans-serif,
+    ;
+}

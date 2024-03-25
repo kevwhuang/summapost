@@ -1,0 +1,21 @@
+@use '../_root' as *;
+
+.modal {
+    cursor: pointer;
+    display: none;
+    height: 100%;
+    position: fixed;
+    user-select: none;
+    width: 100%;
+
+    img {
+        background: $color-1;
+        height: clamp(250px, 100%, 480px);
+        left: 50%;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(250px, 100%, 480px);
+    }
+}

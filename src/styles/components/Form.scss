@@ -1,0 +1,131 @@
+@use '../_root' as *;
+
+@mixin button {
+    background: $color-3;
+    border: none;
+    border-radius: 10px;
+    color: $color-1;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        background: $color-3h;
+        transition: 250ms;
+    }
+}
+
+@mixin input {
+    border: none;
+    outline: 1px solid $color-2;
+    padding: 10px 15px;
+
+    &:focus {
+        outline-color: $color-4;
+    }
+}
+
+.form {
+    margin: 50px 10%;
+    user-select: none;
+
+    .form__source {
+        align-items: center;
+        display: flex;
+
+        .form__source--field {
+            width: 100%;
+
+            input {
+                @include input;
+                width: 100%;
+            }
+        }
+
+        .form__source--selections {
+            margin: 0 20px;
+
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: $color-3h;
+            }
+
+            select {
+                border: none;
+                color: $color-3;
+                height: 40px;
+                outline: 1px solid $color-3h;
+                width: 100px;
+
+                option {
+                    padding: 1px 5px;
+
+                    &:checked {
+                        background: $color-3;
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+
+        button {
+            @include button;
+            width: 100px;
+        }
+    }
+
+    .form__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+
+        .form__inputs--field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+                color: $color-4;
+                font-size: $font-1;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                width: fit-content;
+            }
+
+            input {
+                @include input;
+            }
+
+            textarea {
+                @include input;
+                height: 200px;
+                resize: vertical;
+            }
+        }
+    }
+
+    .form__buttons {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+
+        button {
+            @include button;
+            width: 45%;
+        }
+    }
+
+    .form__help {
+        text-align: center;
+
+        a {
+            color: $color-2;
+            font-size: $font-1;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "summapost-fe",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "author": "Kevin Huang",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kevwhuang/summapost.git"
+    },
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite",
+        "prebuild": "tsc",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@emotion/react": "*",
+        "@emotion/styled": "*",
+        "axios": "*",
+        "react": "*",
+        "react-dom": "*",
+        "react-router-dom": "*"
+    },
+    "devDependencies": {
+        "@types/node": "*",
+        "@types/react": "*",
+        "@types/react-dom": "*",
+        "@types/react-router-dom": "*",
+        "@vitejs/plugin-react-swc": "*",
+        "autoprefixer": "*",
+        "jsdom": "*",
+        "sass": "*",
+        "typescript": "*",
+        "vite": "*",
+        "vite-plugin-pwa": "*"
+    },
+    "private": true
+}
